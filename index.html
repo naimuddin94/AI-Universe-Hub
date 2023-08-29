@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Universe Hub</title>
+    <!-- tailwind and daisyUi link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- fontAwesome link -->
+    <script
+      src="https://kit.fontawesome.com/40da276710.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-slate-100">
+    <section class="text-center">
+      <h1 class="text-3xl text-center font-semibold py-4">AI Universe Hub</h1>
+      <button class="btn btn-md btn-outline btn-secondary">Sort By Date</button>
+      <div
+        id="display"
+        class="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-5"
+      ></div>
+    </section>
+
+    <!-- modal -->
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog id="my_modal_50" class="modal modal-bottom sm:modal-middle">
+      <form method="dialog" class="modal-box max-w-4xl">
+        <div id="modal" class="md:flex gap-3">
+          <div
+            class="mb-5 md:mb-0 flex-1 border border-gray-200 rounded-xl p-5 bg-rose-50"
+          >
+            <h1 class="text-lg font-semibold">
+              ChatGPT is an AI-powered chatbot platform that uses OpenAI's GPT
+              technology to simulate human conversation.
+            </h1>
+            <div
+              class="grid grid-cols-3 gap-3 items-center justify-center font-medium my-5"
+            >
+              <div
+                id="basic-plan"
+                class="flex-1 bg-slate-50 rounded-lg p-5 text-emerald-500"
+              >
+                $10/month Basic
+              </div>
+              <div
+                id="pro-plan"
+                class="flex-1 bg-slate-50 rounded-lg p-5 text-amber-400"
+              >
+                $50/month Pro
+              </div>
+              <div
+                id="enterprise-plan"
+                class="flex-1 bg-slate-50 rounded-lg p-5 text-rose-400"
+              >
+                Contact us Enterprise
+              </div>
+            </div>
+            <div class="flex justify-between">
+              <div>
+                <h2 class="text-lg font-semibold">Features</h2>
+                <ul
+                  id="features"
+                  class="list-disc ml-4 text-sm space-y-1 mt-3"
+                ></ul>
+              </div>
+              <div>
+                <h2 class="text-lg font-semibold">Integrations</h2>
+                <ul
+                  id="integrations"
+                  class="list-disc ml-4 text-sm space-y-1 mt-3"
+                ></ul>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1 border border-gray-200 rounded-xl p-5">
+            <div>
+              <img
+                id="modal-img"
+                src="./images/Jasperchat.png"
+                alt=""
+                class="border border-rose-100 rounded-lg"
+              />
+            </div>
+            <div class="text-center mt-5">
+              <h2 id="chat-qes" class="text-lg font-semibold my-4">
+                Hi, how are you doing today?
+              </h2>
+              <p id="chat-ans" class="text-sm">
+                I'm doing well, thank you for asking. How can I assist you
+                today?
+              </p>
+            </div>
+          </div>
+        </div>
+      </form>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
